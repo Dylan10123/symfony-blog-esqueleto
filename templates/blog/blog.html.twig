@@ -21,7 +21,7 @@
 								</div>
 								<div class="post-body">
 									<h3>
-										<a href="{{path('single_post')}}">
+										<a href="{{path('single_post', {'slug': post.slug})}}">
 											<strong>{{ post.title }}</strong>
 										</a>
 									</h3>
@@ -30,7 +30,7 @@
 									</p>
 								</div>
 								<div class="post-footer">
-									<a class="btn" href="single_post.html">READ MORE...</a>
+									<a class="btn" href="{{path('single_post', {'slug': post.slug})}}">READ MORE...</a>
 									<span>
 										<i class="fa fa-heart sr-icons"></i>
 										{{ post.numLikes }}
