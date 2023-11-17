@@ -56,7 +56,7 @@ class PostRepository extends ServiceEntityRepository
             ->andWhere("p.Content LIKE :val")
             ->setParameter('val', '%'.$searchTerm.'%')
             ->orderBy('p.PublishedAt', 'DESC');
-        
+
         return (new Paginator($qb))->paginate($page);
     }
     // /**
